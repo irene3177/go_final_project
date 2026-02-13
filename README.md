@@ -70,7 +70,7 @@ go mod download
 | Переменная | Описание | Значение по умолчанию |
 |------------|----------|----------------------|
 | `TODO_PORT` | Порт веб-сервера | `7540` |
-| `TODO_DBFILE` | Путь к файлу БД | `scheduler.db` |
+| `TODO_DBFILE` | Путь к файлу БД | `./data/scheduler.db` |
 | `TODO_PASSWORD` | Пароль для аутентификации (опционально) | `""` |
 | `TODO_SECRET` | Секретный ключ для JWT | `default-secret-key-change-in-production` |
 
@@ -112,7 +112,7 @@ TODO_SECRET=your_jwt_secret_key_here
 package tests
 
 var Port = 7540                // Порт для тестов
-var DBFile = "../scheduler.db" // Файл БД для тестов
+var DBFile = "../data/scheduler.db" // Файл БД для тестов
 var FullNextDate = true        // true если реализованы все правила (w, m)
 var Search = true              // true если реализован поиск
 var Token = ""                 // JWT токен (если включена аутентификация)
