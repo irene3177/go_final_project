@@ -9,10 +9,10 @@
 
 1. ✅ Создание, редактирование и удаление задач
 2. 📅 Поддержка различных правил повторения задач:
-  `d N` - повторение каждые N дней
-  `y` - ежегодное повторение
-  `w` - повторение по дням недели
-  `m` - повторение по дням месяца
+  * `d N` - повторение каждые N дней
+  * `y` - ежегодное повторение
+  * `w` - повторение по дням недели
+  * `m` - повторение по дням месяца
 3. 🔍 Поиск задач по тексту и дате
 4. 🔐 Аутентификация по паролю (опционально)
 5. 🐳 Запуск в Docker-контейнере
@@ -111,11 +111,11 @@ TODO_SECRET=your_jwt_secret_key_here
 ```go
 package tests
 
-var Port = 7540              // Порт для тестов
+var Port = 7540                // Порт для тестов
 var DBFile = "../scheduler.db" // Файл БД для тестов
-var FullNextDate = true      // true если реализованы все правила (w, m)
-var Search = true            // true если реализован поиск
-var Token = ""               // JWT токен (если включена аутентификация)
+var FullNextDate = true        // true если реализованы все правила (w, m)
+var Search = true              // true если реализован поиск
+var Token = ""                 // JWT токен (если включена аутентификация)
 ```
 
 ### Запуск отдельных тестов
@@ -226,45 +226,6 @@ docker-compose down
 
 ---
 
-## 📁 Структура проекта
-
-```
-├── README.md
-├── go.mod
-├── go.sum
-├── main.go
-├── pkg/
-│   ├── api/
-│   │   ├── addtask.go
-│   │   ├── api.go
-│   │   ├── done.go
-│   │   ├── gettask.go
-│   │   ├── nextdate.go
-│   │   ├── signin.go
-│   │   ├── tasks.go
-│   │   └── updatetask.go
-│   ├── auth/
-│   │   └── auth.go
-│   ├── db/
-│   │   ├── db.go
-│   │   └── task.go
-│   └── server/
-│       └── server.go
-├── scheduler.db
-├── tests/
-│   ├── addtask_4_test.go
-│   ├── app_1_test.go
-│   ├── db_2_test.go
-│   ├── nextdate_3_test.go
-│   ├── settings.go
-│   ├── task_6_test.go
-│   ├── task_7_test.go
-│   └── tasks_5_test.go
-└── web/
-```
-
----
-
 ## 🔌 API Эндпоинты
 
 | Метод | URL | Описание |
@@ -281,7 +242,7 @@ docker-compose down
 
 ## 🛠 Технологии
 
-* **Backend:** Go 1.21+
+* **Backend:** Go 1.25
 * **База данных:** SQLite3
 * **Аутентификация:** JWT
 * **Контейнеризация:** Docker, Docker Compose

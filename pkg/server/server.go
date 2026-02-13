@@ -17,7 +17,7 @@ func Run() error {
 	// База данных
 	dbFile := os.Getenv("TODO_DBFILE")
 	if dbFile == "" {
-		dbFile = "scheduler.db"
+		dbFile = "./data/scheduler.db"
 	}
 	if err := db.Init(dbFile); err != nil {
 		return err
