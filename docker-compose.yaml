@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  todo-scheduler:
+    build: .
+    container_name: todo-scheduler
+    ports:
+      - "7540:7540"
+    volumes:
+      - ./data:/data
+    environment:
+      - TODO_PORT=7540
+      - TODO_DBFILE=/data/scheduler.db
+      - TODO_PASSWORD=${TODO_PASSWORD:-}
+      - TODO_SECRET=${TODO_SECRET:-default-secret-key-change-in-production}
+    restart: unless-stopped

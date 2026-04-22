@@ -1,0 +1,43 @@
+# Бинарные файлы
+todo-scheduler
+todo-scheduler.exe
+/todo-scheduler
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Директория бинарников (если используете)
+/bin/
+/dist/
+
+# Логи
+*.log
+/logs/
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.classpath
+*.launch
+.settings/
+
+# Сборка
+/out/
+/tmp/
+/build/
+
+# OS временные файлы
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
